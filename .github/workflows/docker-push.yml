@@ -16,10 +16,10 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ASIAVEEYQMUKNS3QRYV5
-        aws-secret-access-key: jaa5w72k5c0bVbIiBR67iGPOynnAnMTXpSEsUYvM
-        aws-session-token: IQoJb3JpZ2luX2VjEFEaDGV1LWNlbnRyYWwtMSJIMEYCIQChutiws/V9+6ZPMPz2FrluE2wqHQI2d+qG+W//DI6KHQIhANTRoC4a2YDK7ibGaw6FNFhKx8iCAX7sS3NPXBLKkRD5Kq0DCKr//////////wEQABoMMzUyNTA3MTU5ODI4IgxNB2BQAxyEiFHPNvQqgQO3gKh1inNGH4lnqXW9NKhK2N0YgCXmhRnEPwYDJklTFPoeT/JXs2LKdc2SWLDhENRhK5NT+FZpb4BcwWDiQ9vsABNqndAD0asJOhAqbP6p2m+XqpEjMdPNu+mekMMt3A6S/SN4LR/hNYtQcWiqIVH3bhVzzf+4ro/rTGE94Ts/fCVlzzp/eSHgtoK2PKFPCOqBuI2mJl2oZki+ytbJjdPNrwpCN5IvonmWjoGY5+Mr2/0sVUsSjXpiJJGCEwNW2EXFTdkQ+PkriOBL3J+DShSFou8AmKqaHSOKKtepCSfkaIemPfMnorP0UOnRRN/vRt4VcQOgV6AxK3gatAvXm/RzpwYEWQI5zhjZmdfe3BU9YLtnx4qKsw2IxmR7/28sLC7VWMeEwPSy8wUwJMB9Txa4VnEP+DnTyJ7CIe6439t/LsnEKt2tz8dVIaL5LVHNfJzPWKbf1MAmuRwS6iBrESCScmTJi6IPrPjjXIRYGX990flaxOtTMArnpYTwS9celAUmMLOek6sGOqUBeTmSx8CtJz2WUBcs7cyJvY8USKU4jMFCFqslFNHq9OuU6hAO8mDghfJd6Cen7GT3g6a5Q+xrwP09742khYj3jUEhTcZwSD4sP2IhN0UqWZLQVqmp8Ak8nnkfJVrtJ5XTHxLtAM+3alW74lr/ApR/p3EQ1EY1m8gDtlFjZLY0ioTYLBDr6qR0e2k42zX0Fi5mYQ/4J7X3dC70dqngaUK6olaQVooF # Optional
-        aws-region: eu-central-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # Hinzugefügt
+        aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Get ECR Login Password (Debug)
       run: |
